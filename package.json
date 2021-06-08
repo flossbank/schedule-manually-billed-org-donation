@@ -1,0 +1,43 @@
+{
+  "name": "schedule-manually-billed-org-donation",
+  "version": "1.0.0",
+  "description": "schedule-manually-billed-org-donation",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix",
+    "ci-tests": "nyc --reporter=cobertura ava",
+    "test": "standard && ava -v"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.543.0",
+    "mongodb": "3.6",
+    "pino": "^6.5.1",
+    "ulid": "^2.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm t"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flossbank/schedule-manually-billed-org-donation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flossbank/schedule-manually-billed-org-donation/issues"
+  },
+  "homepage": "https://github.com/flossbank/schedule-manually-billed-org-donation#readme",
+  "devDependencies": {
+    "ava": "^3.12.1",
+    "husky": "^4.2.5",
+    "mongodb-memory-server": "^6.9.6",
+    "nock": "^13.0.4",
+    "nyc": "^15.0.0",
+    "pino-pretty": "^4.1.0",
+    "sinon": "^9.0.1",
+    "standard": "^14.3.1"
+  }
+}
