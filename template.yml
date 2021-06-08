@@ -17,7 +17,7 @@ Resources:
         StartScheduleEvent:
           Type: Schedule
           Properties:
-            Schedule: cron(0 1 * * *)
+            Schedule: cron(0 1 15 * ? *)
       Policies:
         - AmazonDynamoDBFullAccess
         - Statement:
