@@ -6,7 +6,7 @@ Parameters:
     Type: AWS::SSM::Parameter::Value<String>
     Default: '/api/db/mongo_uri'
 Resources:
-  ScheduleNonStripeOrgDonationFunction:
+  ScheduleManualOrgDonoFunction:
     Type: AWS::Serverless::Function
     Properties:
       Timeout: 240
@@ -14,12 +14,12 @@ Resources:
       Runtime: nodejs12.x
       CodeUri: ./
       Events:
-        StartScheduleEvent:
+        EveryNight:
           Type: Schedule
           Properties:
-            Schedule: cron(0 1 * * *)
+            Schedule: cron(0 1 15 * ? *)
       Policies:
-        - AmazonDynamoDBFullAccess
+        - AmazonSQSFullAccess
         - Statement:
           - Effect: Allow
             Action:
