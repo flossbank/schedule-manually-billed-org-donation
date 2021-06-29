@@ -31,10 +31,3 @@ test('getDistributeOrgDonationQueueUrl pulls from env', (t) => {
   process.env.DISTRIBUTE_ORG_DONATIONS_QUEUE_URL = 'blah'
   t.is(config.getDistributeOrgDonationQueueUrl(), 'blah')
 })
-
-test('getFlossbankOrgId pulls from env', (t) => {
-  const { config } = t.context
-
-  process.env.FLOSSBANK_ORG_ID = 'blah'
-  t.is(config.getFlossbankOrgId(), 'blah')
-})

@@ -19,6 +19,7 @@ Resources:
           Properties:
             Schedule: cron(0 1 15 * ? *)
       Policies:
+        - AmazonSQSFullAccess
         - Statement:
           - Effect: Allow
             Action:
